@@ -15,7 +15,7 @@ $configureBox = <<-SHELL
   add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
   # Dockerのインストール
   apt-get update
-  apt-get install -y docker-ce=$(apt-cache madison docker-ce | grep 18.06.2 | head -1 | awk '{print $3}')
+  apt-get install -y docker-ce=$(apt-cache madison docker-ce | grep 18.03.1 | head -1 | awk '{print $3}')
   apt-mark hold docker-ce
 
   # vagrantユーザーをdockerグループに追加
